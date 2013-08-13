@@ -1,0 +1,18 @@
+= render partial: 'layouts/upload_form', locals: {path: device_record_uploads_path} 
+
+- unless @device_records.blank?
+  %table.table.table-condensed.table-hover
+    %tr{class: 'alert-success'}
+      %th DisplayName
+      %th URLSchemes
+      %th BundleId
+    %tr
+      - @device_records.each do |device_record|
+        %tr{class: device_record.schemes.blank? ? 'no_scheme' : nil}
+          %td= device_record.name
+          %td
+            - if device_record.schemes.present? && device_record.schemes.is_a?(Array)
+              - device_record.schemes.each do |scheme|                                                                                                                                                                             
+                = scheme
+                %br
+          %td= device_record.id

@@ -1,0 +1,4 @@
+= form_tag(path, method: :post, multipart: true) do
+  = label_tag :file, :file do
+    = file_field_tag :file
+  = submit_tag '送信'
