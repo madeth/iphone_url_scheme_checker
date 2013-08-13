@@ -1,28 +1,18 @@
-== README
+# IphoneUrlSchemeChecker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+iphoneのURLスキームを調べるためのWeb画面です。  
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+以下の手順でファイルを作成後、ファイルをアップロードすると対象端末の全アプリURLスキームを調べることができます。  
+`iPhone構成ユーティリティ` -> `デバイス` -> `(端末)` -> `書き出す`
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+## Installation
+
+1. `git clone git@github.com:madeth/iphone_url_scheme_checker.git`
+1. `bundle install --path vendor/bundle`
+
+
+## Usage
+
+* `bundle exec rails s`
