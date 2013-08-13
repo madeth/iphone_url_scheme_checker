@@ -16,7 +16,7 @@ class DeviceRecord
   end
 
   def name
-    self.plist["CFBundleDisplayName"] || self.plist["CFBundleName"]
+    self.plist["CFBundleDisplayName"] || self.plist["CFBundleName"] || self.plist["CFBundleExecutable"]
   end
 
   def schemes
